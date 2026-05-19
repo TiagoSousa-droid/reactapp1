@@ -91,7 +91,7 @@
 
   @media (max-width: 1024px) {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -107,7 +107,7 @@
 #next-steps ul {
   list-style: none;
   padding: 0;
-  display: flex;
+  display: left;
   gap: 8px;
   margin: 32px 0 0;
 
