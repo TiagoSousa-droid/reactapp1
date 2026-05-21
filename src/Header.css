@@ -1,21 +1,32 @@
-logo{
+/*  */
+logo {
     float:left;
-    width: 30%;
-    text-align: left;
+    width:30%;
+    text-align:left;
 }
 
+/* Para a imagem do logo */
 logo img{
     width: 100%;
     max-width: 150px;
 }
 
-nav a {
-    color: #fc0;
+/* Para a nav mandar as palavras para a direita */
+nav{
+    float: right;
+    width: 65%;
+    text-align: right;
+}
+
+/* Para as duas referências "a" */
+nav a{
+    color: rgb(82, 66, 0);
     text-decoration: none;
     padding: 10px;
 }
 
-nav a:hover{
+/* Quando passar por cima das palavras */
+nav a:hover {
     color: #000;
     font-weight: Bold;
 }

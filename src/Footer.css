@@ -1,16 +1,19 @@
+/* Class da div com este nome */
 .footer-center{
     font-size: 16px;
-    text-align:center;
+    text-align: center;
     padding: 30px 0px;
 }
 
-.footer-center a {
-    color: #fc0;
+/* Para as duas referências "a" */
+.footer-center a{
+    color: rgb(82, 66, 0);
     text-decoration: none;
     padding: 10px;
 }
 
+/* Quando passar por cima das palavras */
 .footer-center a:hover {
     color: #000;
-    font-weight: bold;
+    font-weight: Bold;
 }
