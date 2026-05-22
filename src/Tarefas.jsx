@@ -16,11 +16,21 @@ function Tarefas() {
     function handleSubmit(e) {
         e.preventDefault(); // impede o recarregamento da página
         setDadosSubmetidos(formData); // guarda os dados preenchidos
+
+        const novaTarefa = {
+            id: Date.now(),
+            titulo: formData.titulo,
+            data: formData.data,
+            descricao: formData.descricao
+        };
+        setTarefas([...tarefas, novaTarefa]);        
     }
     // Limpa o formulário e os dados apresentados
     function limparFormulario() {
         setFormData({ id: '', titulo: '', data: '', descricao: '' });
         setDadosSubmetidos(null);
+
+
     }
 
     function newTarefa() {
@@ -33,7 +43,7 @@ function Tarefas() {
         setFormData(novaTarefa);
         setTarefas([...tarefas, novaTarefa]);
         setDadosSubmetidos(null);
-        }
+    }
 
     return (
         <div className="mt-4 row">
@@ -65,7 +75,7 @@ function Tarefas() {
                     <button type="button" className="btn btn-outline-secondary"
                         onClick={limparFormulario}>Limpar</button>
 
-                      <button type="button" className="btn btn-outline-secondary"
+                    <button type="button" className="btn btn-outline-secondary"
                         onClick={newTarefa}>Nova Tarefa</button>
                 </form>
             </div>
