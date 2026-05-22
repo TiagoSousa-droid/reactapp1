@@ -2,13 +2,12 @@
 function Alerta(props) {
 
     return (
-        <div>
-            <div className="alert alert-success text-center" role="alert">
-                {props.text}
-            </div>
+            <div className={`alert alert-${props.tipo} text-center`} role="alert">
+                {props.texto}
         </div>
     );
 }
+
 
 export default Alerta;
 
