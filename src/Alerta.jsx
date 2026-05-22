@@ -10,8 +10,5 @@ function Alerta(props) {
     );
 }
 
-className={`text-center ${ props.NOVA
-}`}
-
 export default Alerta;
 
