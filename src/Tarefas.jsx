@@ -30,8 +30,12 @@ function Tarefas() {
         setFormData({ id: '', titulo: '', data: '', descricao: '' });
         setDadosSubmetidos(null);
 
-
     }
+
+    function EliminarTarefa() {
+        setTarefas([]);
+    }
+
 
     function newTarefa() {
         const novaTarefa = {
@@ -73,10 +77,15 @@ function Tarefas() {
                     <button className="btn btn-success mr-2">Enviar</button>
 
                     <button type="button" className="btn btn-outline-secondary"
-                        onClick={limparFormulario}>Limpar</button>
+                        onClick={limparFormulario}>Limpar </button>
 
                     <button type="button" className="btn btn-outline-secondary"
                         onClick={newTarefa}>Nova Tarefa</button>
+
+                    <button type="button" className="btn btn-danger"
+                        onClick={EliminarTarefa}>Eliminar Tarefas
+                        </button>
+
                 </form>
             </div>
 
@@ -101,6 +110,7 @@ function Tarefas() {
                             <h5>{tarefa.titulo}</h5>
                             <p>{tarefa.data}</p>
                             <p>{tarefa.descricao}</p>
+                            <button className="btn btn-danger" onClick={() => setTarefas(tarefas.filter((t) => t.id !== tarefa.id))}>Eliminar</button>
                         </li>
                     ))}
                 </ul>
